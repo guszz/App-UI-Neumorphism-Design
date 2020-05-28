@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App UI Neumorphism Design</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <button type="button"><i class="fa fa-arrow-left"></i></button>
+        <button type="button"><i class="fa fa-search"></i></button>
+      </nav>
+    </header>
+    <main>
+      <h1 class="t1">History</h1>
+      <div class="toggle-goup">
+        <input type="radio" id="today-data" name="data-choose">
+        <label for="today-data" class="t4">Today</label>
+        <input type="radio" id="yesterday-data" name="data-choose" checked>
+        <label for="yesterday-data" class="t4">Yesterday</label>
+      </div>
+      <div class="chart">
+        <div class="chart-label">
+          <span class="t2">45%</span>
+          <span class="text-muted">saving</span>
+        </div>
+        <svg class="progress" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <circle r="40" cx="50" cy="50" stroke-width="7" fill="transparent" stroke="#1c2025" class="sc"></circle>
+          <circle id="chartfill" r="40" cx="50" cy="50" stroke-width="7" stroke-dasharray="245" stroke-dashoffset="245" 
+          fill="transparent" stroke="#ff240f" stroke-linecap="round" class="meter"></circle>
+        </svg>
+      </div>
+      <button id="btntransactions" class="t4 w-100">Show My Subscriber</button>
+    </main>
+    <nav>
+        <a href="#" class="btn text-muted"><i class="fa fa-home"></i></a>
+        <a href="#" class="btn text-muted"><i class="fa fa-credit-card"></i></a>
+        <a href="#" class="btn text-muted active"><i class="fa fa-heart active"></i></a>
+        <a href="#" class="btn text-muted"><i class="fa fa-bell"></i></a>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,233 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: cursive;
+}
+
+body {
+  background-color: #1b1f23;
+  color: #626262;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+a {
+  color: #626262;
+}
+
+.text-muted {
+  color: #626262;
+}
+
+.t1 {
+  font-size: 1.5rem;
+}
+
+.t2 {
+  font-size: 1.5rem;
+}
+
+.t3 {
+  font-size: 1rem;
+}
+
+.t4 {
+  font-size: 0.85rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.container {
+  /*box-shadow: 15px 15px 30px #0c0e10c9,
+  -15px -15px 30px #14191dd1,
+  inset -10px -7px 25px 0px rgba(0,0,0,0.52),
+  inset 15px 21px 24px 0px #1b1f23cf;*/
+  height: 587px;
+  width: 300px;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  -webkit-box-shadow: -4px -2px 4px 0px #262830, 4px 2px 6px 0px #0e1013;
+          box-shadow: -4px -2px 4px 0px #262830, 4px 2px 6px 0px #0e1013;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+button,
+.btn,
+.toggle-group label {
+  position: relative;
+  background: inherit;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: -4px -2px 4px 0px #262830, 4px 2px 6px 0px #111316;
+          box-shadow: -4px -2px 4px 0px #262830, 4px 2px 6px 0px #111316;
+  cursor: pointer;
+}
+
+button:focus:after,
+button:active:after,
+.btn.active:after,
+.toggle-group input:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  -webkit-box-shadow: 2px 2px 2px 0px #111316 inset, -2px -2px 2px 0px #262830 inset;
+          box-shadow: 2px 2px 2px 0px #111316 inset, -2px -2px 2px 0px #262830 inset;
+}
+
+button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+button svg.feather {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.fa {
+  color: #626262;
+  font-size: 20px;
+}
+
+.btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.fa.active {
+  color: #ff240f;
+}
+
+main {
+  padding: 1.5rem 0.25rem;
+}
+
+.toggle-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.toggle-group label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0.7rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.toggle-group label:first-of-type {
+  margin-right: 1rem;
+}
+
+.toggle-group input {
+  display: none;
+}
+
+.chart {
+  position: relative;
+  border-radius: 50%;
+  margin: 2rem;
+  -webkit-box-shadow: -4px -2px 4px 0px #262830, 4px 2px 6px 0px #111316;
+          box-shadow: -4px -2px 4px 0px #262830, 4px 2px 6px 0px #111316;
+}
+
+.chart::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  margin: 3rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: 2px 2px 2px 0px #111316 inset, -2px -2px 2px 0px #262830 inset;
+          box-shadow: 2px 2px 2px 0px #111316 inset, -2px -2px 2px 0px #262830 inset;
+}
+
+.chart .chart-label {
+  position: absolute;
+  top: 0;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chart .chart-label span {
+  display: block;
+}
+
+#btntransactions {
+  font-size: 16px;
+  color: #626262;
+  padding: 0.75rem;
+  font-family: cursive;
+  border-radius: 6px;
+}
+
+#chartfill {
+  -webkit-animation: chart 500ms linear forwards;
+          animation: chart 500ms linear forwards;
+}
+
+@-webkit-keyframes chart {
+  from {
+    stroke-dashoffset: 245;
+  }
+  to {
+    stroke-dashoffset: 110;
+  }
+}
+
+@keyframes chart {
+  from {
+    stroke-dashoffset: 245;
+  }
+  to {
+    stroke-dashoffset: 110;
+  }
+}
+/*# sourceMappingURL=main.css.map */
